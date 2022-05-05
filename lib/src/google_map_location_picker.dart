@@ -37,7 +37,7 @@ class LocationPicker extends StatefulWidget {
     this.resultCardAlignment = Alignment.bottomCenter,
     this.resultCardDecoration,
     this.resultCardPadding = const EdgeInsets.all(16.0),
-    this.countries = const ["IN"],
+    this.countries = const ["VI"],
     this.language = 'en',
     this.desiredAccuracy = LocationAccuracy.bestForNavigation,
   }) : super(key: key);
@@ -134,7 +134,7 @@ class LocationPickerState extends State<LocationPicker> {
                 const SizedBox(width: 24),
                 Expanded(
                   child: Text(
-                    S.of(context).finding_place,
+                      "Find place",
                     style: const TextStyle(fontSize: 16),
                   ),
                 )
@@ -183,7 +183,7 @@ class LocationPickerState extends State<LocationPicker> {
 
         if (predictions.isEmpty) {
           AutoCompleteItem aci = AutoCompleteItem();
-          aci.text = S.of(context).no_result_found;
+          aci.text = "No result found";
           aci.offset = 0;
           aci.length = 0;
 
